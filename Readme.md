@@ -1,4 +1,5 @@
 # Django-React Demo
+[![Build Status](https://app.travis-ci.com/allexiusw/react-crypto.svg?branch=master)](https://app.travis-ci.com/allexiusw/react-crypto)
 
 ## Clone the project
 
