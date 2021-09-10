@@ -12,11 +12,11 @@ node {
         stage 'Test'
             sh 'python3 -m venv env'
             sh '. env/bin/activate'
-            sh 'env/bin/pip install -r requirements.txt'
-            sh 'env/bin/python3 manage.py test --testrunner=react-crypto.tests.test_runners.NoDbTestRunner'
+            sh 'env/bin/pip install -r api/requirements.txt'
+            sh 'env/bin/python3 api/src/manage.py test --testrunner=react-crypto.tests.test_runners.NoDbTestRunner'
 
-        stage 'Deploy'
-            sh './deployment/deploy_prod.sh'
+        // stage 'Deploy'
+        //    sh './deployment/deploy_prod.sh'
 
         stage 'Publish results'
             telegramSend "Jenkins task completed"
