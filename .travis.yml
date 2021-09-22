@@ -7,4 +7,5 @@ install:
   - pip install -r api/requirements.txt
 # command to run tests
 script:
-  - python api/src/manage.py test
+  - cd api/src; python manage.py test
+  
